@@ -20,7 +20,7 @@ Environnement
 ----------------------------
 
 Les éléments faisant varier l'environnement sont :
-- un obstacle (y compris "trou"
+- un obstacle (y compris "trou")
 - une batterie faible robot
 - la visibilité du robot
 
@@ -57,3 +57,23 @@ Tant que objectif non atteint
  - Tanque obstacle non franchi
   - Eviter obstacle  
  - recalculer direction globale, recalculer direction locale
+
+Variation d'environnement
+------------------------------------
+
+# les causes de variation
+
+Ce robot possède des capteurs :
+ 
+- éclairement
+- erreurs de mesures et de calcul
+
+#Solutions aux différents problèmes des capteurs
+
+## Eclairement
+Afin de s'abstrait du niveau de variation d'eclairement, au démarrage il devra définir le 0 associé à la variation de lumùière en effectuant sur ses capteurs un échantillonnage du niveau 0
+
+##Erreurs de mesures et de calcul
+Afin d'obtenir des mesures réalistes, il est nécessaire de moyeenné les mesures. Et d'ajouter un système de détermination d'erreur de mesure et/ou de calcul. Un delta d'erreur devra être calculé afin de corriger l'erreur
+
+exemple : vitesse et/ou position des moteur du robot pour effetcuer un déplacement donné
